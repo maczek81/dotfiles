@@ -1,0 +1,21 @@
+[user]
+	email = pmm@estakada.pl 
+	name = Pawel Makowski
+[core]
+	editor = vim
+[color]
+        ui = auto
+[alias]
+	lg = log --graph --decorate --abbrev-commit --oneline --color --all -20
+        lo = log --decorate --all --color --graph --format=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --
+	s = status
+	br = branch
+	dc = diff --color --word-diff
+	co = checkout
+        cm = commit
+        cmm = commit -m 
+	pr = pull --rebase
+[merge]
+	tool = vimdiff
+[log]
+	decorate = full
