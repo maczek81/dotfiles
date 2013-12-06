@@ -1,5 +1,5 @@
 [user]
-	email = pmm@estakada.pl 
+	email = %EMAIL% 
 	name = Pawel Makowski
 [core]
 	editor = vim
