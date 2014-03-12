@@ -1,13 +1,18 @@
 [user]
-	email = pmm@estakada.pl 
-	name = Pawel Makowski
+	email = %USER_EMAIL% 
+	name = %USER_NAME%
 [core]
 	editor = vim
 [color]
         ui = auto
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
 [alias]
 	lg = log --graph --decorate --abbrev-commit --oneline --color --all -20
-        lo = log --decorate --all --color --graph --format=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --
+        lo = log --decorate --all --color --graph --format=format:'%C(yellow)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset' --
+
 	s = status
 	br = branch
 	dc = diff --color --word-diff
