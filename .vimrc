@@ -34,3 +34,4 @@ hi StatusLine ctermfg=0 ctermbg=2
 
 " enable mouse
 set mouse=a
+:color desert
