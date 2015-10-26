@@ -43,10 +43,24 @@ install_vim () {
    ln -sf $DOTFILES/.vimrc $HOME/.vimrc
 }
 
+install_ohmyzsh () {
+    ZSH_INSTALLED=$(grep /zsh$ /etc/shells | wc -l)
+    if [ ! $ZSH_INSTALLED -ge 1 ]; then
+        echo -e "${YELLOW}Zsh is not installed!${RESET} Please install zsh first!"
+        exit
+    fi
+    if [ ! -d $HOME/.oh-my-zsh ]; then
+        echo -e "${YELLOW}Please install oh-my-zsh first!${RESET}"
+        exit
+    fi
+    ln -sf $DOTFILES/.zshrc $HOME/.zshrc
+}
+
 install () {
    install_git
    install_screen 
    install_vim
+   install_ohmyzsh
    echo -e "${GREEN}Done${RESET}"
 }
 
